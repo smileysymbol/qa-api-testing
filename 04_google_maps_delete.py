@@ -60,7 +60,7 @@ class GoogleMapAPI:
             for place_id in timed_list_with_place_ids:
                 new_url = url + '&place_id=' + place_id.strip('\n')
                 response = requests.get(new_url)
-                if response.status_code != 404 :
+                if response.status_code != 404:
                     assert response.status_code == 200
                     print(new_url, 'Статус код 200\n', sep='\n')
 
